@@ -12,6 +12,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 
+//to import mat-list
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { MenuComponent } from './menu/menu.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
+    MatListModule,
     AppRoutingModule
   ],
   providers: [],
