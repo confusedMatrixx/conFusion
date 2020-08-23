@@ -12,8 +12,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 
-//to import mat-list
-import { MatListModule } from '@angular/material/list';
+//to import mat-grid-list
+import { MatGridListModule } from '@angular/material/grid-list';
+
+//to import button
+import { MatButtonModule } from '@angular/material/button';
+
+//to import mat-card
+
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,9 @@ import { MatListModule } from '@angular/material/list';
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
-    MatListModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatCardModule,
     AppRoutingModule
   ],
   providers: [],
