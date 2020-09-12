@@ -17,21 +17,24 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 //to import button
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatListModule } from '@angular/material/list';
 //to import mat-card
 
 import { MatCardModule } from '@angular/material/card';
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    DishdetailComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
+    MatListModule,
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
