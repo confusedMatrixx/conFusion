@@ -15,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
 //to import mat-card
 import { MatCardModule } from '@angular/material/card';
 
+
 //still to find what is the essense of this
 import 'hammerjs';
 
@@ -30,6 +31,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
 //services
 import { DishService } from './services/dish.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { PromotionService } from './services/promotion.service';
 
 
 @NgModule({
@@ -54,7 +56,10 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MatCardModule,
     AppRoutingModule
   ],
-  providers: [DishService],
+  providers: [
+    DishService,
+    PromotionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
