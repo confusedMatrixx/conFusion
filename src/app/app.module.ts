@@ -16,6 +16,17 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 
+//For template drived form
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+//For Reactive Forms
+import {ReactiveFormsModule} from '@angular/forms';
+//For form fields
+import {MatInputModule} from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 //still to find what is the essense of this
 import 'hammerjs';
 
@@ -58,8 +69,15 @@ import { LeaderService } from './services/leader.service';
     MatListModule,
     MatGridListModule,
     MatButtonModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatCheckboxModule,
     MatCardModule,
     MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [
