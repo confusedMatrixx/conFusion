@@ -14,7 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 //to import mat-card
 import { MatCardModule } from '@angular/material/card';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 //still to find what is the essense of this
 import 'hammerjs';
@@ -27,12 +27,16 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
+import { LoginComponent } from './login/login.component';
 
 //services
 import { DishService } from './services/dish.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
+
+
+
 
 @NgModule({
   declarations: [
@@ -43,7 +47,8 @@ import { LeaderService } from './services/leader.service';
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +59,7 @@ import { LeaderService } from './services/leader.service';
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
+    MatDialogModule,
     AppRoutingModule
   ],
   providers: [
@@ -61,8 +67,11 @@ import { LeaderService } from './services/leader.service';
     PromotionService,
     LeaderService
   ],
+  entryComponents: [
+    LoginComponent
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   title = 'conFusion';
 }
