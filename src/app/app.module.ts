@@ -15,7 +15,8 @@ import { MatListModule } from '@angular/material/list';
 //to import mat-card
 import { MatCardModule } from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
-
+//to import spinner
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 //For template drived form
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
@@ -73,6 +74,7 @@ import { LeaderService } from './services/leader.service';
     MatSelectModule,
     MatSlideToggleModule,
     MatCheckboxModule,
+    MatProgressSpinnerModule,
     MatCardModule,
     MatDialogModule,
     MatFormFieldModule,

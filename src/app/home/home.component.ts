@@ -23,8 +23,23 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void{
-    this.dish = this.dishservice.getFeaturedDish();
-    this.promotion = this.promotionservice.getFeaturedPromotion();
-    this.leader = this.leaderservice.getFeaturedLeader();
+    /**
+     * .then is executed when the promise is resolved
+     * here "dish" is the returned result from the getFeaturedDish method in the dishService
+     * the arrow function initialises the dish variable in the home component class with the
+     * returned result
+     * NOTE: when a promise is rejected the error is handled using ".catch" block
+     */
+    this.dishservice.getFeaturedDish().then(
+      (dish) => { this.dish = dish; }
+    );
+    
+    this.promotionservice.getFeaturedPromotion().then(
+      (promotion) => { this.promotion = promotion; }
+    );
+
+    this.leaderservice.getFeaturedLeader().then(
+      (leader) => { this.leader = leader; }
+    );
   }
 }

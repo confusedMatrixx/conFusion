@@ -17,10 +17,20 @@ export class MenuComponent implements OnInit {
   constructor(private dishService: DishService) { }
 
   ngOnInit(): void {
-    this.dishes = this.dishService.getDishes();
+    this.dishService.getDishes().then(
+      (dishes) => {
+        this.dishes = Array.from(dishes);
+      }
+    );
+
+    if(this.dishes == null){
+      console.log('Null dishes catched.');
+    }
+
+    console.log(JSON.stringify(this.dishes));
   }
 
-  onSelect(dish: Dish){
+  onSelect(dish: Dish): void{
     this.selectedDish = dish;
   }
 
